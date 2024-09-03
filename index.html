@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Óptica - Ana Visión</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Botones del carrusel */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
 
@@ -24,6 +36,9 @@
                         <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#contacto">Medios de Contacto</a>
                     </li>
                 </ul>
@@ -32,7 +47,7 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="py-5 text-center">
+    <section id="home" class="py-5 text-center d-flex align-items-center" style="height: 100vh;">
         <div class="container">
             <h1 class="display-4">Bienvenidos a Nuestra Óptica</h1>
             <p class="lead">Ofrecemos los mejores productos y servicios para el cuidado de tu vista.</p>
@@ -65,6 +80,106 @@
         </div>
     </section>
 
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Nuestros Servicios</h2>
+            <div id="serviciosCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3 text-center">
+                                <img src="assets/img1.jpg" class="d-block w-100" alt="Servicio 1" data-bs-toggle="modal" data-bs-target="#modalServicio1">
+                                <h3 class="mt-3">Examen de Vista</h3>
+                                <!--<p>Realizamos exámenes de vista completos para asegurar tu salud visual.</p>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3 text-center">
+                                <img src="assets/img2.jpg" class="d-block w-100" alt="Servicio 2" data-bs-toggle="modal" data-bs-target="#modalServicio2">
+                                <h3 class="mt-3">Lentes de Contacto</h3>
+                                <!--<p>Ofrecemos una amplia gama de lentes de contacto para todas tus necesidades.</p>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3 text-center">
+                                <img src="assets/img3.jpg" class="d-block w-100" alt="Servicio 3" data-bs-toggle="modal" data-bs-target="#modalServicio3">
+                                <h3 class="mt-3">Armazones a Medida</h3>
+                                <!--<p>Fabricamos gafas personalizadas para adaptarse perfectamente a tu estilo y necesidades.</p>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#serviciosCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#serviciosCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Servicio 1 -->
+    <div class="modal fade" id="modalServicio1" tabindex="-1" aria-labelledby="modalServicio1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalServicio1Label">Examen de Vista</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Realizamos exámenes de vista completos para asegurar que tu salud visual esté en las mejores condiciones. Nuestro equipo de especialistas utiliza tecnología de punta para un diagnóstico preciso.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Servicio 2 -->
+    <div class="modal fade" id="modalServicio2" tabindex="-1" aria-labelledby="modalServicio2Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalServicio2Label">Lentes de Contacto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Ofrecemos una amplia gama de lentes de contacto que se adaptan a tus necesidades. Desde lentes para uso diario hasta aquellos para condiciones específicas, garantizamos la máxima comodidad y visión clara.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Servicio 3 -->
+    <div class="modal fade" id="modalServicio3" tabindex="-1" aria-labelledby="modalServicio3Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalServicio3Label">Armazones a Medida</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Nuestros armazones a medida están diseñadas para ofrecerte no solo una visión perfecta, sino también un ajuste que se adapte a tu estilo y personalidad. Utilizamos materiales de alta calidad para garantizar durabilidad y comodidad.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Medios de Contacto Section -->
     <section id="contacto" class="py-5 text-center">
         <div class="container">
@@ -73,8 +188,11 @@
             <ul class="list-unstyled">
                 <li>Email: contacto@optica.com</li>
                 <li>Teléfono: +1 234 567 890</li>
-                <li>Dirección: Calle Hacienda Cano #115, Real de Haciendas, Aguascalientes</li>
             </ul>
+            <div>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
         </div>
     </section>
 

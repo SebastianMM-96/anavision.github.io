@@ -1,0 +1,18 @@
+/* Imagen de fondo en Home */
+#home {
+    background-image: url('https://via.placeholder.com/1200x800');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Iconos de redes sociales */
+.social-icon {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: #333;
+}
+.social-icon:hover {
+    color: #007bff;
+}
