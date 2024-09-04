@@ -17,12 +17,17 @@
             width: 50px;
             height: 50px;
         }
+
+        .card {
+            border: none; /* Ocultar bordes de las tarjetas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregar sombra para destacar las tarjetas */
+        }
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Óptica Ana Visión</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +36,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
+                        <a class="nav-link active" href="#home">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
@@ -40,7 +45,7 @@
                         <a class="nav-link" href="#servicios">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Medios de Contacto</a>
+                        <a class="nav-link" href="#contacto">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -70,7 +75,7 @@
                     </p>
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="text-center rmb-4">Misión</h2>
+                    <h2 class="text-center rmb-4">Visión</h2>
                     <p>
                         Brindar atención visual de excelencia, combinando tecnología avanzada, un equipo profesional 
                         altamente capacitado, y un enfoque personalizado para satisfacer las necesidades visuales de nuestros clientes, 
@@ -139,7 +144,7 @@
                     Realizamos exámenes de vista completos para asegurar que tu salud visual esté en las mejores condiciones. Nuestro equipo de especialistas utiliza tecnología de punta para un diagnóstico preciso.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -157,7 +162,7 @@
                     Ofrecemos una amplia gama de lentes de contacto que se adaptan a tus necesidades. Desde lentes para uso diario hasta aquellos para condiciones específicas, garantizamos la máxima comodidad y visión clara.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -175,24 +180,63 @@
                     Nuestros armazones a medida están diseñadas para ofrecerte no solo una visión perfecta, sino también un ajuste que se adapte a tu estilo y personalidad. Utilizamos materiales de alta calidad para garantizar durabilidad y comodidad.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Medios de Contacto Section -->
-    <section id="contacto" class="py-5 text-center">
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-5">
         <div class="container">
-            <h2 class="mb-4">Medios de Contacto</h2>
-            <p>Puedes contactarnos a través de los siguientes medios:</p>
-            <ul class="list-unstyled">
-                <li>Email: contacto@optica.com</li>
-                <li>Teléfono: +1 234 567 890</li>
-            </ul>
-            <div>
-                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            <h2 class="mb-4 text-center">Contáctanos</h2>
+            <div class="row g-4">
+    
+                <!-- Tarjeta de Dirección con Google Maps -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-map-marker-alt fa-3x mb-3"></i>
+                            <h5 class="card-title">Dirección</h5>
+                            <div class="ratio ratio-16x9">
+                                <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3702.2080207064128!2d-102.24576332414185!3d21.88806395771001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429f1ef883ffacb%3A0x9e88fbb70df7177e!2sHacienda%20Cano%20115%2C%20Real%20de%20Haciendas%2C%2020196%20Aguascalientes%2C%20Ags.!5e0!3m2!1ses!2smx!4v1725428084366!5m2!1ses!2smx" 
+                                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Tarjeta de Teléfono -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-phone fa-3x mb-3"></i>
+                            <h5 class="card-title">Teléfono</h5>
+                            <p class="card-text"><a href="tel:+1234567890">+1 234 567 890</a></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Tarjeta de Redes Sociales -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-share-alt fa-3x mb-3"></i>
+                            <h5 class="card-title">Redes Sociales</h5>
+                            <div class="d-flex justify-content-center">
+                                <a href="https://www.facebook.com/tuempresa" target="_blank"
+                                    class="btn btn-primary btn-sm mx-1">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://wa.me/5211234567890" target="_blank" class="btn btn-success btn-sm mx-1">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
             </div>
         </div>
     </section>
