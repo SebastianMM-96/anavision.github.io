@@ -1,8 +1,41 @@
 /* Imagen de fondo en Home */
 #home {
-    background-image: url('https://via.placeholder.com/1200x800');
+    background-image: url('../assets/homeImg.jpg');
     background-size: cover;
     background-position: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
+
+#catalogo {
+    background-image: url('../assets/catalogImg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  .card-body {
+    background-color: #f8f9fa;
+    border-top: 3px solid #007bff;
+  }
+  .precio {
+    font-size: 1.5rem;
+    color: #28a745;
+    font-weight: bold;
+  }
+  .card-title {
+    font-size: 1.2rem;
+    color: #343a40;
+  }
+
+  /* Estilo para la imagen dentro de las tarjetas */
+  .card-img-top {
+    width: 100%; /* Se ajusta al 100% del ancho de la tarjeta */
+    height: 200px; /* Altura fija */
+    object-fit: cover; /* Ajusta la imagen sin deformarla, cortando los bordes si es necesario */
+  }
